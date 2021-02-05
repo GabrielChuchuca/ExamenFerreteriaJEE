@@ -3,9 +3,9 @@
  */
 package ec.edu.ups.vista;
 
-import ec.edu.ups.modelo.Cliente;
-import ec.edu.ups.modelo.Respuesta;
-import ec.edu.ups.modelo.Titulo;
+import ec.edu.ups.modelo.Producto;
+
+
 
 /**
  * @author Gabriel Leonardo Chu
@@ -21,7 +21,9 @@ public class Principal {
 		
 		ServiceRest sR = new ServiceRest();
 		//Cliente cli = new Cliente();
-		//cli.setApellido("VELETENGA ORDOÑEZ");
+		Producto p = new Producto();
+		p.setNombre("gg");
+		p.setStock(5);
 		//cli.setCedula("0705626339");
 		//cli.setCorreo("vinicioveletanga@gmail.com");
 		//cli.setDireccion("PASAJE");
@@ -29,11 +31,13 @@ public class Principal {
 		//cli.setTelefono("0963963369");
 		//System.out.println("prueba principal" +" "+ sR.obtenerCliente("1303292583")); 
 		System.out.println("\n");
-		System.out.println("prueba lista T" +" "+ sR.getClientes());
+		
+		System.out.println(p);
 		System.out.println("\n");
-		Titulo tit = sR.getTitulo("0705626339", "SIS", "UDA");
-		System.out.println(tit);
-		//String respuesta = sR.saveCliente(cli);
+		System.out.println("prueba lista T" +" "+ sR.getProductos());
+		//Titulo tit = sR.getTitulo("0705626339", "SIS", "UDA");
+		//System.out.println(tit);
+		//String respuesta = sR.saveProd(1,p.getStock());
 		//System.out.println(respuesta);
 		//System.out.println("------NEW");
 		//System.out.println("prueba lista T" +" "+ sR.getClientes());
